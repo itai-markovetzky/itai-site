@@ -3,24 +3,17 @@
 import { useState, useEffect } from "react";
 import { useSite } from "./SiteContext";
 
-const navLinksEn = [
+const navLinks = [
   { label: "About", href: "#about" },
   { label: "Projects", href: "#projects" },
   { label: "Skills", href: "#skills" },
   { label: "Contact", href: "#contact" },
 ];
-const navLinksHe = [
-  { label: "אודות", href: "#about" },
-  { label: "פרויקטים", href: "#projects" },
-  { label: "כישורים", href: "#skills" },
-  { label: "צור קשר", href: "#contact" },
-];
 
 export default function Navbar() {
   const [scrolled, setScrolled] = useState(false);
   const [menuOpen, setMenuOpen] = useState(false);
-  const { theme, lang, toggleTheme, toggleLang } = useSite();
-  const navLinks = lang === "he" ? navLinksHe : navLinksEn;
+  const { theme, toggleTheme } = useSite();
 
   useEffect(() => {
     const handleScroll = () => setScrolled(window.scrollY > 80);
@@ -61,15 +54,8 @@ export default function Navbar() {
           ))}
         </ul>
 
-        {/* Theme + lang toggles */}
+        {/* Theme toggle */}
         <div className="hidden md:flex items-center gap-2">
-          <button
-            onClick={toggleLang}
-            className="font-mono text-xs text-foreground/50 hover:text-cyan transition-colors px-2 py-1 border border-border rounded"
-            aria-label="Toggle language"
-          >
-            {lang === "en" ? "עב" : "EN"}
-          </button>
           <button
             onClick={toggleTheme}
             className="text-foreground/50 hover:text-cyan transition-colors p-1"
