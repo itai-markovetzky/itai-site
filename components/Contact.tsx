@@ -51,7 +51,7 @@ export default function Contact() {
           </h2>
           <h3 className="text-3xl md:text-4xl font-bold mb-4">Get In Touch</h3>
           <p className="text-foreground/60 mb-12 max-w-md mx-auto">
-            Available for freelance work, collaborations, or just a good
+            Open to collaborations, interesting projects, or just a good
             conversation about AI and automation.
           </p>
 
@@ -71,14 +71,9 @@ export default function Contact() {
                 <span className="text-foreground/60 group-hover:text-cyan transition-colors">
                   {link.icon}
                 </span>
-                <div className="text-left">
-                  <div className="font-mono text-xs text-foreground/40">
-                    {link.label}
-                  </div>
-                  <div className="font-mono text-sm text-foreground/80 group-hover:text-cyan transition-colors">
-                    {link.value}
-                  </div>
-                </div>
+                <span className="font-mono text-sm text-foreground/80 group-hover:text-cyan transition-colors">
+                  {link.label}
+                </span>
               </motion.a>
             ))}
           </div>
@@ -86,10 +81,15 @@ export default function Contact() {
       </div>
 
       {/* Footer */}
-      <div className="text-center mt-16 font-mono text-xs text-foreground/30">
-        <span>© 2026 Itai Markovetzky</span>
-        <span className="mx-2 text-cyan">·</span>
-        <span>Built with Next.js + ❤️</span>
+      <div className="text-center mt-16 font-mono text-xs text-foreground/30 space-y-2">
+        <div>
+          <span>© 2026 Itai Markovetzky</span>
+          <span className="mx-2 text-cyan">·</span>
+          <span>Built with Next.js + ❤️</span>
+        </div>
+        <div className="text-foreground/20 hover:text-foreground/50 transition-colors cursor-default select-none">
+          psst... try ↑ ↑ ↓ ↓ ← → ← → B A
+        </div>
       </div>
     </section>
   );

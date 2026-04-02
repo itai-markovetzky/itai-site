@@ -8,7 +8,7 @@ const ParticleBackground = dynamic(() => import("./ParticleBackground"), {
   ssr: false,
 });
 
-const TITLES = ["Automation Developer", "AI Enthusiast", "Problem Solver"];
+const TITLES = ["Senior Automation Engineer", "Integration Developer", "AI Systems Builder", "Tech Lead in the Making"];
 
 function useTypewriter(words: string[], speed = 80, pause = 1800) {
   const [displayed, setDisplayed] = useState("");
@@ -73,11 +73,11 @@ export default function Hero() {
       <div className="absolute inset-0 bg-gradient-to-b from-transparent via-transparent to-background z-10 pointer-events-none" />
 
       <div className="relative z-20 max-w-4xl mx-auto px-6 text-center">
-        {/* Available badge */}
-        <div className="inline-flex items-center gap-2 bg-black/40 border border-cyan/30 rounded-full px-4 py-1.5 mb-6 backdrop-blur-sm">
-          <span className="w-2 h-2 rounded-full bg-green-400 animate-pulse" />
+        {/* Status badge */}
+        <div className="inline-flex items-center gap-2 bg-black/40 border border-purple/30 rounded-full px-4 py-1.5 mb-6 backdrop-blur-sm">
+          <span className="text-purple text-xs">⚡</span>
           <span className="font-mono text-xs text-foreground/70">
-            Available for freelance
+            Automation · Integration · AI
           </span>
         </div>
 

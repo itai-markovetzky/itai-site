@@ -1,36 +1,96 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Itai Markovetzky — Personal Portfolio
+
+> Automation & AI Developer · Personal brand + project showcase site
+
+[![Live Site](https://img.shields.io/badge/Live-itai--site.vercel.app-00f5ff?style=flat-square&logo=vercel&logoColor=black)](https://itai-site.vercel.app)
+[![Next.js](https://img.shields.io/badge/Next.js-14-black?style=flat-square&logo=next.js)](https://nextjs.org)
+[![TypeScript](https://img.shields.io/badge/TypeScript-5-3178c6?style=flat-square&logo=typescript&logoColor=white)](https://typescriptlang.org)
+[![Tailwind CSS](https://img.shields.io/badge/Tailwind-3-06b6d4?style=flat-square&logo=tailwindcss&logoColor=white)](https://tailwindcss.com)
+
+---
+
+## Overview
+
+A dark-themed, hacker-aesthetic personal portfolio built to communicate technical credibility at a glance. Showcases automation projects, AI work, and professional background — with interactive features that reflect the skill set behind them.
+
+---
+
+## Features
+
+| Feature | Description |
+|---|---|
+| **Particle Hero** | Animated neural-network background using tsparticles |
+| **Typewriter** | Cycles through titles: Automation Developer → AI Enthusiast → Problem Solver |
+| **Terminal Widget** | Fake terminal that types out on load |
+| **AI Chatbot** | RAG-powered assistant answers questions about Itai using his CV (Gemini 2.0) |
+| **Project Showcase** | Card grid with glitch-on-hover effect for all GitHub projects |
+| **GitHub Stats** | Live contribution graph and top languages |
+| **CV Download** | One-click PDF download |
+| **Konami Easter Egg** | ↑↑↓↓←→←→BA — try it |
+| **Scroll Animations** | Framer Motion fade/slide transitions on each section |
+| **Mobile Responsive** | Tailwind breakpoints, hamburger nav |
+
+---
+
+## Tech Stack
+
+- **Framework:** Next.js 14 (App Router)
+- **Styling:** Tailwind CSS with custom dark palette
+- **Animations:** Framer Motion + tsparticles
+- **AI:** Google Gemini 2.0 Flash via `@google/generative-ai`
+- **Fonts:** JetBrains Mono + Inter
+- **Deployment:** Vercel
+
+---
 
 ## Getting Started
 
-First, run the development server:
-
 ```bash
+# Clone
+git clone https://github.com/itai-markovetzky/itai-site.git
+cd itai-site
+
+# Install (requires Node.js >= 18.17)
+npm install
+
+# Add environment variables
+echo "GOOGLE_GEMINI_API_KEY=your_key_here" > .env.local
+
+# Run dev server
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+Open [http://localhost:3000](http://localhost:3000).
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+---
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+## Project Structure
 
-## Learn More
+```
+itai-site/
+├── app/
+│   ├── api/chat/route.ts   # Gemini RAG chatbot endpoint
+│   ├── layout.tsx
+│   └── page.tsx
+├── components/             # All UI components
+├── data/
+│   ├── projects.ts         # Project list
+│   ├── now.ts              # "What I'm building now"
+│   └── cv-text.ts          # CV text for RAG context
+└── public/
+    └── cv.pdf              # Downloadable CV
+```
 
-To learn more about Next.js, take a look at the following resources:
+---
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+## Environment Variables
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+| Variable | Description |
+|---|---|
+| `GOOGLE_GEMINI_API_KEY` | Google Gemini API key for the AI chatbot |
 
-## Deploy on Vercel
+---
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+## License
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+MIT

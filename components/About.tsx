@@ -20,16 +20,20 @@ export default function About() {
           <div className="grid md:grid-cols-3 gap-10 items-start">
             <div className="md:col-span-2 space-y-4 text-foreground/80 text-lg leading-relaxed">
               <p>
-                I&apos;m Itai Markovetzky, an Integration & Automation Developer
-                and AI enthusiast based in Ramat Gan, Israel. I build intelligent
-                automation systems — from enterprise RPA with UiPath and Workato
-                to RAG-based AI agents powered by LangChain and vector databases.
+                I&apos;m Itai Markovetzky — an Automation & Integration Developer
+                with a passion for building intelligent systems that eliminate
+                repetitive work and unlock real business value.
               </p>
               <p>
-                Currently at Electra Ltd, connecting ERP/CRM systems through
-                APIs and AI-powered document processing. B.Sc. in Computer
-                Science from HIT (GPA 86). When I&apos;m not automating
-                something, you&apos;ll probably find me gaming.
+                I specialize in enterprise-grade RPA, API-driven integrations,
+                and AI-powered automation — combining tools like UiPath, Workato,
+                and LangChain with hands-on Python and C# development. I hold a
+                B.Sc. in Computer Science and bring a sharp, engineering-first
+                mindset to every problem I tackle.
+              </p>
+              <p>
+                When I&apos;m not automating something, you&apos;ll probably
+                find me gaming.
               </p>
             </div>
 
