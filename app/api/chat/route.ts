@@ -36,7 +36,9 @@ export async function POST(req: Request) {
 
     const text = result.response.text();
     return Response.json({ reply: text });
-  } catch {
-    return Response.json({ error: "Something went wrong" }, { status: 500 });
+  } catch (err) {
+    const message = err instanceof Error ? err.message : String(err);
+    console.error("Chat API error:", message);
+    return Response.json({ error: message }, { status: 500 });
   }
 }
