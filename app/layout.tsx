@@ -1,5 +1,7 @@
 import type { Metadata } from "next";
 import { Inter, JetBrains_Mono } from "next/font/google";
+import { Analytics } from "@vercel/analytics/react";
+import { SiteProvider } from "@/components/SiteContext";
 import "./globals.css";
 
 const inter = Inter({
@@ -40,7 +42,10 @@ export default function RootLayout({
       <body
         className={`${inter.variable} ${jetbrainsMono.variable} font-sans bg-background text-foreground antialiased`}
       >
-        {children}
+        <SiteProvider>
+          {children}
+        </SiteProvider>
+        <Analytics />
       </body>
     </html>
   );
