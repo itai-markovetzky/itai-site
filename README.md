@@ -9,6 +9,10 @@
 
 ---
 
+![Portfolio Preview](./public/preview.png)
+
+---
+
 ## Overview
 
 A dark-themed, hacker-aesthetic personal portfolio built to communicate technical credibility at a glance. Showcases automation projects, AI work, and professional background — with interactive features that reflect the skill set behind them.
